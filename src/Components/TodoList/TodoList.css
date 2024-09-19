@@ -1,0 +1,51 @@
+/* Container for the TodoList */
+.todo-list-container {
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #f0f4f8;
+    border-radius: 15px;
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    animation: fadeInUp 0.6s ease-out;
+  }
+  
+  /* No todos text */
+  .no-todos {
+    text-align: center;
+    font-size: 20px;
+    color: #999;
+    padding: 20px;
+    font-weight: bold;
+  }
+  
+  /* Funky animation for fade-in effect */
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  /* Adding some spacing between todo items */
+  .todo-item {
+    margin-bottom: 15px;
+    animation: swingIn 0.8s ease-in-out;
+  }
+  
+  /* Funky animation for individual todos */
+  @keyframes swingIn {
+    0% {
+      opacity: 0;
+      transform: rotateX(-100deg);
+    }
+    100% {
+      opacity: 1;
+      transform: rotateX(0);
+    }
+  }
+  
