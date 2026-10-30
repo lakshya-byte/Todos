@@ -16,6 +16,7 @@ function Todo({ todoData, isFinished, changeFinished, onDelete, onEdit }) {
           setFinished(e.target.checked);
           changeFinished(e.target.checked);
         }}
+        aria-label={isFinished ? "Mark as incomplete" : "Mark as complete"}
       />
 
       {isEditing ? (
@@ -24,12 +25,13 @@ function Todo({ todoData, isFinished, changeFinished, onDelete, onEdit }) {
           value={editText}
           className="todo-edit-input"
           onChange={(e) => setEditText(e.target.value)}
+          aria-label="Edit todo"
         />
       ) : (
         <span className="todo-text">{todoData}</span>
       )}
 
-      <button className="todo-delete-btn" onClick={onDelete}>
+      <button className="todo-delete-btn" onClick={onDelete} aria-label="Delete todo">
         Delete
       </button>
 
@@ -39,6 +41,7 @@ function Todo({ todoData, isFinished, changeFinished, onDelete, onEdit }) {
           setIsEditing(!isEditing);
           onEdit(editText);
         }}
+        aria-label={isEditing ? "Save todo" : "Edit todo"}
       >
         {!isEditing ? "Edit" : "Save"}
       </button>
