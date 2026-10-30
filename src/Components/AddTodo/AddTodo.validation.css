@@ -1,0 +1,9 @@
+/* Validation styles for AddTodo input */
+.add-todo-input:invalid {
+    border-color: #dc3545;
+    box-shadow: 0 0 8px rgba(220, 53, 69, 0.3);
+}
+
+.add-todo-input:invalid:focus {
+    box-shadow: 0 0 8px rgba(220, 53, 69, 0.5);
+}
